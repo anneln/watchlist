@@ -12,6 +12,6 @@ The user can remove a film from the watchlist.
 
 ## Technical Requirements
 
-[x] Connect to OMDb database via its API
-[x] Save data to local storage
-[x] App responsive and accessible
+- [x] Connect to OMDb database via its API
+- [x] Save data to local storage
+- [x] App responsive and accessible
