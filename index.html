@@ -1,0 +1,64 @@
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <title>Movie Watchlist</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/iconWList.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-section">
+        <h1>Find your film</h1>
+        <a href="#">My watchlist</a>
+      </div>
+      <form
+        class="search-form"
+        role="search"
+        aria-label="search a film"
+        action=""
+        method="get"
+      >
+        <div class="search-wrapper">
+          <img
+            src="images/searchIcon.svg"
+            alt=""
+            aria-hidden="true"
+            class="search-icon"
+          />
+          <input
+            type="search"
+            name="film-title"
+            id="film-title"
+            aria-label="film title"
+            placeholder=" Write a title"
+          />
+          <input
+            type="submit"
+            name="search-film"
+            value="Search"
+            id="search-btn"
+            aria-label="search a title"
+          />
+        </div>
+      </form>
+    </header>
+    <main class="main-container">
+      <img
+        id="black-icon"
+        src="images/IconBlack.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <div id="film-list"></div>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 550px;
+  max-height: 100vhx;
+}
+
+h1,
+a {
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.67em;
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.875em;
+  font-weight: 700;
+}
+
+header,
+.main-container {
+  background-color: #121212;
+}
+
+header {
+  height: 208px;
+  background-image: url("images/THJJRUhNlEc.png");
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding-top: 2.2rem;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 517px
+}
+
+/* form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+input {
+  height: 1.75rem;
+}
+
+input#film-title {
+  width: 19.75rem;
+  color: #a5a5a5;
+  background-color: #2e2e2f;
+}
+
+input#search-btn {
+  width: 5.75rem;
+  height: 1.75rem;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background: #4b4b4b;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.search-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding-top: 0.2rem;
+  align-items: baseline;
+}
+
+/*display film list*/
+
+#film-list{
+  display: flex;
+  align-content: baseline;
+  flex-direction: column;
+  padding : 1rem 0.5rem;
+}
+
+.film-card{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.description{
+  line-height: 1.2rem;
+}
+
+#poster-img {
+  width: 6.1875rem;
+  object-fit: cover;
+  border-radius: 2.329px;
+  padding: 1rem;
+}
+
+/*film details*/
+
+.name-rate, .details {
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+h2{
+  color: #FFF;
+  text-align: justify;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+
+
+p {
+  color: #A5A5A5;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+#addToList {
+  color: #FFF;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 20px;
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+  
+
+
+#plot{
+  width: 21.375rem;
+}
+
+hr{
+  background: #2C2C2C;
+  height: 1.5px;
+}
+
+/*
+@media (min-width: 768px) { 
+  ... }  /* tablet */
+  /*
+@media (min-width: 1200px) { ... } /* desktop */
+/*
