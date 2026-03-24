@@ -53,7 +53,6 @@ async function getAFilm(titleEl) {
       savedfilms.push(data);
       localStorage.setItem("watchlist", JSON.stringify(savedfilms));
     });
-
     filmList.appendChild(filmCard);
   } catch (err) {
     console.error("Something get wrong", err);
