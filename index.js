@@ -22,6 +22,10 @@ async function getAFilm(titleEl) {
       return "";
     }
 
+    const savedfilms = JSON.parse(localStorage.getItem("films")) || [];
+    savedfilms.push(data);
+    localStorage.setItem("films", JSON.stringify(savedfilms));
+
     const filmCard = ` <div class ="film-card">
    <img id="poster-img" src="${data.Poster}"/>
     <div class="description">
