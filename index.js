@@ -2,6 +2,7 @@ let title = document.getElementById("film-title");
 const searchBtn = document.getElementById("search-btn");
 const filmList = document.getElementById("film-list");
 const filmRoll = document.getElementById("black-icon");
+const myMovies = document.getElementById("my-movies");
 
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
@@ -19,14 +20,12 @@ async function getAFilm(titleEl) {
     const data = await res.json();
     if (!data.Title) {
       window.alert("We haven't found this film in our database");
-      return "";
+      return (filmList.innerHTML = `<p id="Not-found">Unable to find what you’re looking for.<br> Please try another search.</p>`);
     }
 
-    const savedfilms = JSON.parse(localStorage.getItem("films")) || [];
-    savedfilms.push(data);
-    localStorage.setItem("films", JSON.stringify(savedfilms));
-
-    const filmCard = ` <div class ="film-card">
+    const filmCard = document.createElement("div");
+    filmCard.classList.add("film-card");
+    filmCard.innerHTML = ` 
    <img id="poster-img" src="${data.Poster}"/>
     <div class="description">
       <div class="name-rate">
@@ -37,20 +36,25 @@ async function getAFilm(titleEl) {
       <div class="details">
         <p>${data.Runtime}</p>
         <p>${data.Genre}</p>
-        <button class="btn" id="addToList">
+        <a href="watchlist.html" class="btn addToList">
           <img id="plus" src="images/plusIcon.svg" alt="" aria-hidden="true" />
           WatchList
-        </button>
+        </a>
       </div>
       <div class="resume">
         <p id="plot">${data.Plot}</p>
       </div>
       <hr>
     </div>
-  </div>
   `;
+    const addBtn = filmCard.querySelector(".addToList");
+    addBtn.addEventListener("click", function () {
+      const savedfilms = JSON.parse(localStorage.getItem("watchlist")) || [];
+      savedfilms.push(data);
+      localStorage.setItem("watchlist", JSON.stringify(savedfilms));
+    });
 
-    filmList.innerHTML += filmCard;
+    filmList.appendChild(filmCard);
   } catch (err) {
     console.error("Something get wrong", err);
   }

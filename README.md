@@ -12,6 +12,7 @@ The user can remove a film from the watchlist.
 
 ## Technical Requirements
 
+- [x] Follow figma design
 - [x] Connect to OMDb database via its API
 - [x] Save data to local storage
 - [x] App responsive and accessible
