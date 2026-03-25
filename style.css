@@ -8,7 +8,7 @@
 body {
   margin: 0 auto;
   width: 100%;
-  min-width: 450px;
+  min-width: 250px;
 }
 
 h1,
@@ -37,13 +37,15 @@ header {
   height: 208px;
   background-image: url("images/THJJRUhNlEc.png");
   border-radius: 5px 5px 0 0;
+  padding: 2.2rem 0.5rem;
+  text-align: center;
 }
 
 .header-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: baseline;
-  padding-top: 2.2rem;
 }
 
 .main-container,
@@ -72,21 +74,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3.2rem;
+  margin-top: 7.8rem;
   position: relative;
   z-index: 10;
 }
 
 .search-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-radius: 6px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.search-icon {
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 input {
@@ -94,9 +92,12 @@ input {
 }
 
 input#film-title {
-  width: 19.75rem;
+  width: 12rem;
   color: #a5a5a5;
   background-color: #2e2e2f;
+  padding-left: 2rem;
+  background-image: url("images/SearchIcon.svg");
+  background-repeat: no-repeat;
 }
 
 #search-btn {
@@ -110,13 +111,6 @@ input#film-title {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
-}
-
-.search-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  padding-top: 0.2rem;
-  align-items: baseline;
 }
 
 /*display film list*/
@@ -225,10 +219,16 @@ footer a {
   body {
     max-width: 1199px;
   }
+  input#film-title {
+    width: 19.75rem;
+  }
 } /*Tablet*/
 
 @media (min-width: 1200px) {
   body {
     max-width: 1600px;
+  }
+  input#film-title {
+    width: 19.75rem;
   }
 } /* desktop */

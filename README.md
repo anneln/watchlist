@@ -17,3 +17,4 @@ The user can remove a film from the watchlist.
 - [x] Save data to local storage
 - [x] Avoid duplicates on Watchlist
 - [x] App mobile-first, responsive and accessible
+- [x] Deploy to Netlify
