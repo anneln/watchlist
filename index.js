@@ -44,7 +44,6 @@ async function getAFilm(titleEl) {
       <div class="resume">
         <p id="plot">${data.Plot}</p>
       </div>
-      <hr>
     </div>
   `;
     const addBtn = filmCard.querySelector(".addToList");

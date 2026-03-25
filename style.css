@@ -9,7 +9,6 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 550px;
-  max-height: 100vhx;
 }
 
 h1,
@@ -29,13 +28,15 @@ a {
 }
 
 header,
-.main-container, .watchlist-container {
+.main-container,
+.watchlist-container {
   background-color: #121212;
 }
 
 header {
   height: 208px;
   background-image: url("images/THJJRUhNlEc.png");
+  border-radius: 5px 5px 0 0;
 }
 
 .header-section {
@@ -45,12 +46,13 @@ header {
   padding-top: 2.2rem;
 }
 
-.main-container, .watchlist-container {
+.main-container,
+.watchlist-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   height: auto;
-  min-height: 517px
+  min-height: 33vh;
 }
 
 /* form */
@@ -107,20 +109,22 @@ input#search-btn {
 
 /*display film list*/
 
-#film-list{
+#film-list {
   display: flex;
   align-content: baseline;
   flex-direction: column;
-  padding : 1rem 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
-.film-card{
+.film-card {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  border-bottom: 1.5px solid #2c2c2c;
+  padding-right: 1.5rem;
 }
 
-.description{
+.description {
   line-height: 1.2rem;
 }
 
@@ -133,27 +137,28 @@ input#search-btn {
 
 /*film details*/
 
-.name-rate, .details {
+.name-rate,
+.details {
   display: flex;
   justify-content: start;
   gap: 0.5rem;
   align-items: center;
 }
 
-h2{
-  color: #FFF;
+h2 {
+  color: #fff;
   text-align: justify;
   font-size: 1.125rem;
   font-weight: 500;
 }
 
 p {
-  color: #A5A5A5;
+  color: #a5a5a5;
   font-size: 0.875rem;
   font-weight: 400;
 }
 
-p#not-found{
+p#not-found {
   color: #787878;
   text-align: center;
   font-size: 1.125em;
@@ -161,7 +166,7 @@ p#not-found{
 }
 
 .btn {
-  color: #FFF;
+  color: #fff;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 20px;
@@ -176,39 +181,50 @@ p#not-found{
   gap: 0.5rem;
   padding-left: 1rem;
 }
-  
-#plot{
-  width: 21.375rem;
+
+#plot {
+  width: 100%;
 }
 
-hr{
-  background: #2C2C2C;
+hr {
+  background: #2c2c2c;
   height: 1.5px;
 }
 
 /* watchlist*/
-#add-more{
+#add-more {
   display: flex;
 }
 
-#return-home{
+#return-home {
   padding-left: 0.5rem;
 }
 
-footer{
+footer {
   text-align: center;
   background-color: #000;
   padding: 0.5rem;
+  border-radius: 0 0 5px 5px;
 }
 
-footer, footer a {
+footer,
+footer a {
   color: #a5a5a5;
 }
 
+@media (min-width: 768px) {
+  body {
+    max-width: 1199px;
+  }
+  .main-container,
+  .watchlist-container {
+    height: auto;
+    min-height: 100vh;
+  }
+}
 
-/*
-@media (min-width: 768px) { 
-  ... }  /* tablet */
-  /*
-@media (min-width: 1200px) { ... } /* desktop */
-/*
+@media (min-width: 1200px) {
+  body {
+    max-width: 1600px;
+  }
+} /* desktop */

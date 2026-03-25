@@ -34,7 +34,6 @@ function renderWatchlist() {
       <div class="resume">
         <p id="plot">${film.Plot}</p>
       </div>
-      <hr>
     </div>
   `;
 
