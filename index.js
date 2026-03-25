@@ -45,12 +45,21 @@ async function getAFilm(titleEl) {
       </div>
     </div>
   `;
-    const addBtn = filmCard.querySelector(".addToList");
-    addBtn.addEventListener("click", function () {
-      const savedfilms = JSON.parse(localStorage.getItem("watchlist")) || [];
-      savedfilms.push(data);
-      localStorage.setItem("watchlist", JSON.stringify(savedfilms));
-    });
+    addToWatchList();
+    function addToWatchList() {
+      const addBtn = filmCard.querySelector(".addToList");
+      addBtn.addEventListener("click", function () {
+        const savedfilms = JSON.parse(localStorage.getItem("watchlist")) || [];
+        if (savedfilms.some((film) => film.imdbID === data.imdbID)) {
+          window.alert(
+            "This film is already in your watchlist, you can't add it again !",
+          );
+          return;
+        }
+        savedfilms.push(data);
+        localStorage.setItem("watchlist", JSON.stringify(savedfilms));
+      });
+    }
     filmList.appendChild(filmCard);
   } catch (err) {
     console.error("Something get wrong", err);

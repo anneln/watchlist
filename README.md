@@ -15,4 +15,5 @@ The user can remove a film from the watchlist.
 - [x] Follow figma design
 - [x] Connect to OMDb database via its API
 - [x] Save data to local storage
-- [x] App responsive and accessible
+- [x] Avoid duplicates on Watchlist
+- [x] App mobile-first, responsive and accessible
