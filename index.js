@@ -1,7 +1,7 @@
 let title = document.getElementById("film-title");
 const searchBtn = document.getElementById("search-btn");
 const filmList = document.getElementById("film-list");
-const filmRoll = document.getElementById("black-icon");
+const filmRoll = document.getElementById("empty-state");
 const myMovies = document.getElementById("my-movies");
 
 searchBtn.addEventListener("click", function (event) {
@@ -19,19 +19,18 @@ async function getAFilm(titleEl) {
     );
     const data = await res.json();
     if (!data.Title) {
-      window.alert("We haven't found this film in our database");
       return (filmList.innerHTML = `<p id="Not-found">Unable to find what you’re looking for.<br> Please try another search.</p>`);
     }
 
     const filmCard = document.createElement("div");
     filmCard.classList.add("film-card");
     filmCard.innerHTML = ` 
-   <img id="poster-img" src="${data.Poster}"/>
+   <img class="poster-img" src="${data.Poster}"/>
     <div class="description">
       <div class="name-rate">
         <h2>${data.Title}</h2>
         <img src="images/IconStar.svg"/>
-        <p id="note">${data.imdbRating}</p>
+        <p class="note">${data.imdbRating}</p>
       </div>
       <div class="details">
         <p>${data.Runtime}</p>
@@ -42,7 +41,7 @@ async function getAFilm(titleEl) {
         </a>
       </div>
       <div class="resume">
-        <p id="plot">${data.Plot}</p>
+        <p class="plot">${data.Plot}</p>
       </div>
     </div>
   `;

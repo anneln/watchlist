@@ -16,12 +16,12 @@ function renderWatchlist() {
       const filmCard = document.createElement("div");
       filmCard.classList.add("film-card");
       filmCard.innerHTML = ` 
-   <img id="poster-img" src="${film.Poster}"/>
+   <img class="poster-img" src="${film.Poster}"/>
     <div class="description">
       <div class="name-rate">
         <h2>${film.Title}</h2>
         <img src="images/IconStar.svg"/>
-        <p id="note">${film.imdbRating}</p>
+        <p class="note">${film.imdbRating}</p>
       </div>
       <div class="details">
         <p>${film.Runtime}</p>
@@ -32,7 +32,7 @@ function renderWatchlist() {
         </button>
       </div>
       <div class="resume">
-        <p id="plot">${film.Plot}</p>
+        <p class="plot">${film.Plot}</p>
       </div>
     </div>
   `;

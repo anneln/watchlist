@@ -8,7 +8,7 @@
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 550px;
+  min-width: 450px;
 }
 
 h1,
@@ -52,7 +52,18 @@ header {
   justify-content: center;
   align-items: top;
   height: auto;
-  min-height: 33vh;
+  min-height: 75vh;
+}
+
+#empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#empty-state p {
+  color: #2e2e2f;
+  text-align: center;
 }
 
 /* form */
@@ -87,7 +98,7 @@ input#film-title {
   background-color: #2e2e2f;
 }
 
-input#search-btn {
+#search-btn {
   width: 5.75rem;
   height: 1.75rem;
   border: none;
@@ -128,7 +139,7 @@ input#search-btn {
   line-height: 1.2rem;
 }
 
-#poster-img {
+.poster-img {
   width: 6.1875rem;
   object-fit: cover;
   border-radius: 2.329px;
@@ -182,16 +193,12 @@ p#not-found {
   padding-left: 1rem;
 }
 
-#plot {
+.plot {
   width: 100%;
 }
 
-hr {
-  background: #2c2c2c;
-  height: 1.5px;
-}
-
 /* watchlist*/
+
 #add-more {
   display: flex;
 }

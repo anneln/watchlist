@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=500, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Movie Watchlist</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/iconWList.svg" />
@@ -22,8 +23,6 @@
         class="search-form"
         role="search"
         aria-label="search a film"
-        action=""
-        method="get"
       >
         <div class="search-wrapper">
           <img
@@ -34,31 +33,32 @@
           />
           <input
             type="search"
-            name="film-title"
             id="film-title"
             aria-label="film title"
             placeholder=" Write a title"
+            autocomplete="off"
           />
-          <input
-            type="submit"
-            name="search-film"
-            value="Search"
+          <button type="submit"
             id="search-btn"
-            aria-label="search a title"
-          />
+            aria-label="search a title">
+            Search
+          </button>
         </div>
       </form>
     </header>
     <main class="main-container">
-      <img
+      <div id="empty-state">
+        <img
         id="black-icon"
         src="images/IconBlack.svg"
         alt=""
         aria-hidden="true"
       />
-      <div id="film-list"></div>
+        <p>Start exploring</p>
+      </div> 
+      <div id="film-list" role="list" aria-live="polite"></div>
     </main>
-    <footer>&copy<a href=https://ahbricet.com target="_blank"> ahbricet.com</a></footer>
-    <script src="index.js"></script>
+    <footer>&copy;<a href=https://ahbricet.com target="_blank"> ahbricet.com</a></footer>
+    <script src="index.js" defer></script>
   </body>
 </html>
