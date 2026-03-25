@@ -5,10 +5,11 @@ function renderWatchlist() {
   myMovies.innerHTML = "";
   if (savedFilms.length === 0) {
     myMovies.innerHTML = `<div>
-  <p>Your watchlist is looking a little empty...</p>
-  <div><img src="images/plusIcon.svg" alt="" aria-hidden="true">
-  <p>Let’s add some movies!</p>
-  </div>
+    <p>Your watchlist is looking a little empty...</p>
+    <a href="index.html" id="add-more">
+      <img src="images/plusIcon.svg" alt="" aria-hidden="true">
+      <p id="return-home">Let’s add some movies!</p>
+    </a>
   </div>`;
   } else {
     savedFilms.forEach((film) => {
