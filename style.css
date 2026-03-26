@@ -8,7 +8,7 @@
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 350px;
+  max-width: 360px;
 }
 
 h1,
@@ -55,7 +55,7 @@ header {
   justify-content: center;
   align-items: top;
   height: auto;
-  min-height: 75vh;
+  min-height: 65vh;
   padding-top: 4rem;
 }
 
@@ -94,7 +94,7 @@ header {
 }
 
 input {
-  height: 1.75rem;
+  height: 2.5rem;
 }
 
 input#film-title {
@@ -112,7 +112,7 @@ input#film-title {
 
 #search-btn {
   width: 5.75rem;
-  height: 1.75rem;
+  height: 2.5rem;
   border: none;
   border-radius: 6px;
   background: #4b4b4b;
