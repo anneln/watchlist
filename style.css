@@ -99,7 +99,6 @@ input {
 }
 
 input#film-title {
-  width: 12rem;
   color: #a5a5a5;
   background-color: #2e2e2f;
   padding-left: 2rem;
