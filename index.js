@@ -48,7 +48,7 @@ async function getAFilm(titleEl) {
     addToWatchList();
     function addToWatchList() {
       const addBtn = filmCard.querySelector(".addToList");
-      addBtn.addEventListener("click", function () {
+      addBtn.addEventListener("click", () => {
         const savedfilms = JSON.parse(localStorage.getItem("watchlist")) || [];
         if (savedfilms.some((film) => film.imdbID === data.imdbID)) {
           window.alert(
