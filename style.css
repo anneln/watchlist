@@ -39,6 +39,8 @@ header,
 header {
   height: 208px;
   background-image: url("images/THJJRUhNlEc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 5px 5px 0 0;
   padding: 2.2rem 0.5rem;
   text-align: center;
