@@ -65,3 +65,7 @@ async function getAFilm(titleEl) {
     console.error("Something get wrong", err);
   }
 }
+
+document.getElementById("empty-state").addEventListener("click", () => {
+  document.getElementById("film-title").focus();
+});

@@ -70,6 +70,7 @@ header {
 #empty-state p {
   color: #a5a5a5;
   text-align: center;
+  cursor: text;
 }
 
 /* form */
