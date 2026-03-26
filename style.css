@@ -8,7 +8,7 @@
 body {
   margin: 0 auto;
   width: 100%;
-  min-width: 250px;
+  max-width: 350px;
 }
 
 h1,
@@ -39,6 +39,7 @@ header {
   border-radius: 5px 5px 0 0;
   padding: 2.2rem 0.5rem;
   text-align: center;
+  position: relative;
 }
 
 .header-section {
@@ -55,6 +56,7 @@ header {
   align-items: top;
   height: auto;
   min-height: 75vh;
+  padding-top: 4rem;
 }
 
 #empty-state {
@@ -74,15 +76,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7.8rem;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  transform: translateX(-50%);
   z-index: 10;
+  width: 100%;
 }
 
 .search-wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
   border-radius: 6px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
@@ -98,13 +104,17 @@ input#film-title {
   padding-left: 2rem;
   background-image: url("images/SearchIcon.svg");
   background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
+  border: none;
+  border-radius: 6px;
 }
 
 #search-btn {
   width: 5.75rem;
   height: 1.75rem;
   border: none;
-  border-radius: 0 6px 6px 0;
+  border-radius: 6px;
   background: #4b4b4b;
   cursor: pointer;
   color: #ffffff;
@@ -215,20 +225,35 @@ footer a {
   color: #a5a5a5;
 }
 
+@media (min-width: 540px) {
+  body {
+    max-width: 600px;
+  }
+  .search-wrapper {
+    flex-direction: row;
+    gap: 0;
+  }
+  input#film-title {
+    width: 19.75rem;
+    border-radius: 6px 0 0 6px;
+  }
+  #search-btn {
+    border-radius: 0 6px 6px 0;
+  }
+}
 @media (min-width: 768px) {
   body {
-    max-width: 1199px;
+    max-width: 900px;
+  }
+  .search-wrapper {
+    flex-direction: row;
+    gap: 0;
   }
   input#film-title {
-    width: 19.75rem;
+    width: 24rem;
+    border-radius: 6px 0 0 6px;
   }
-} /*Tablet*/
-
-@media (min-width: 1200px) {
-  body {
-    max-width: 1600px;
+  #search-btn {
+    border-radius: 0 6px 6px 0;
   }
-  input#film-title {
-    width: 19.75rem;
-  }
-} /* desktop */
+}
