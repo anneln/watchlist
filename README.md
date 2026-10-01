@@ -1,6 +1,8 @@
 # Movie Watchlist
 
 This is a solo project to create a movie watchlist.
+Try the app, and save it on your mobile home
+[add your films](https://movieswishlist.netlify.app/) 🎬
 
 ## What should the app do ?
 
@@ -18,6 +20,3 @@ The user can remove a film from the watchlist.
 - [x] Avoid duplicates on Watchlist
 - [x] App mobile-first, responsive and accessible
 - [x] Deploy to Netlify
-
-Try the app, and save it on your mobile home
-[add your films](https://movieswishlist.netlify.app/)
